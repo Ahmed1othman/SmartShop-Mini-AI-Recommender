@@ -10,6 +10,60 @@
 
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-headline: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --color-surface-dim: #d4dbdf;
+    --color-on-secondary: #fbf7ff;
+    --color-on-tertiary-fixed-variant: #6a4b70;
+    --color-on-primary-fixed: #000000;
+    --color-on-surface: #2c3437;
+    --color-surface-bright: #f7f9fb;
+    --color-surface-container-low: #f0f4f7;
+    --color-outline-variant: #acb3b7;
+    --color-on-secondary-fixed-variant: #5a5a6f;
+    --color-error: #a8364b;
+    --color-surface-container-high: #e3e9ed;
+    --color-on-tertiary: #fff7fb;
+    --color-on-primary-container: #000000;
+    --color-surface-container-lowest: #ffffff;
+    --color-error-dim: #6b0221;
+    --color-tertiary-dim: #67486c;
+    --color-on-surface-variant: #596064;
+    --color-primary-fixed: #7073ff;
+    --color-primary-container: #7073ff;
+    --color-inverse-surface: #0b0f10;
+    --color-primary: #4a4bd7;
+    --color-on-tertiary-container: #604266;
+    --color-outline: #747c80;
+    --color-on-secondary-container: #505064;
+    --color-on-primary: #fbf7ff;
+    --color-tertiary-fixed: #f5cdf9;
+    --color-primary-fixed-dim: #6366f1;
+    --color-secondary-fixed-dim: #d4d2eb;
+    --color-on-error-container: #6e0523;
+    --color-error-container: #f97386;
+    --color-on-primary-fixed-variant: #010028;
+    --color-inverse-on-surface: #9a9d9f;
+    --color-background: #f7f9fb;
+    --color-surface-container-highest: #dce4e8;
+    --color-secondary: #5d5d72;
+    --color-on-background: #2c3437;
+    --color-tertiary-fixed-dim: #e7bfea;
+    --color-tertiary-container: #f5cdf9;
+    --color-surface-variant: #dce4e8;
+    --color-tertiary: #745479;
+    --color-secondary-dim: #515166;
+    --color-secondary-container: #e2e0f9;
+    --color-secondary-fixed: #e2e0f9;
+    --color-inverse-primary: #8083ff;
+    --color-surface-tint: #4a4bd7;
+    --color-surface-container: #eaeff2;
+    --color-on-secondary-fixed: #3d3e51;
+    --color-primary-dim: #3d3dcb;
+    --color-on-tertiary-fixed: #4c2f52;
+    --color-on-error: #fff7f7;
+    --color-surface: #f7f9fb;
 
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f5f5f5;
@@ -23,9 +77,9 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
-    --color-accent: var(--color-neutral-800);
-    --color-accent-content: var(--color-neutral-800);
-    --color-accent-foreground: var(--color-white);
+    --color-accent: var(--color-primary);
+    --color-accent-content: var(--color-on-primary);
+    --color-accent-foreground: var(--color-on-primary);
 }
 
 @layer theme {

@@ -12,7 +12,7 @@ use Illuminate\Validation\Rules;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-#[Layout('components.layouts.auth')]
+#[Layout('components.layouts.auth.split', ['title' => 'Create account', 'description' => 'Join our boutique community today.'])]
 class Register extends Component
 {
     public string $name = '';
@@ -22,6 +22,16 @@ class Register extends Component
     public string $password = '';
 
     public string $password_confirmation = '';
+
+    /**
+     * Initialize the component.
+     */
+    public function mount(): void
+    {
+        if (! session()->has('url.intended') && url()->previous() !== url()->current()) {
+            session()->put('url.intended', url()->previous());
+        }
+    }
 
     /**
      * Handle an incoming registration request.
@@ -41,6 +51,6 @@ class Register extends Component
 
         Auth::login($user);
 
-        $this->redirect(route('dashboard', absolute: false), navigate: true);
+        $this->redirectIntended(default: route('home'), navigate: true);
     }
 }

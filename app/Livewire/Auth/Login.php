@@ -17,7 +17,7 @@ use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Smpita\TypeAs\TypeAs;
 
-#[Layout('components.layouts.auth')]
+#[Layout('components.layouts.auth.split', ['title' => 'Welcome back', 'description' => 'Sign in to your atelier account to continue.'])]
 class Login extends Component
 {
     #[Validate('required|string|email')]
@@ -27,6 +27,16 @@ class Login extends Component
     public string $password = '';
 
     public bool $remember = false;
+
+    /**
+     * Initialize the component.
+     */
+    public function mount(): void
+    {
+        if (! session()->has('url.intended') && url()->previous() !== url()->current()) {
+            session()->put('url.intended', url()->previous());
+        }
+    }
 
     /**
      * Handle an incoming authentication request.
@@ -55,7 +65,7 @@ class Login extends Component
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
 
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        $this->redirectIntended(default: route('home'), navigate: true);
     }
 
     /**
